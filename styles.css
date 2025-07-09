@@ -29,13 +29,13 @@ body, html {
 
 #layer1 {
     background-color: #000000;
-    background-image: url('grid1.png');
+    background-image: url('grid1.jpg');
     z-index: 3;
 }
 
 #layer2 {
     background-color: #000000;
-    background-image: url('grid2.png');
+    background-image: url('grid2.jpg');
     z-index: 2;
     opacity: 0;
 }
