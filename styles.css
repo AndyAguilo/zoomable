@@ -42,7 +42,7 @@ body, html {
 
 #layer3 {
     background-color: #000000;
-    background-image: url('grid3.png');
+    background-image: url('grid3.jpg');
     z-index: 1;
     opacity: 0;
 }
