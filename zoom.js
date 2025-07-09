@@ -7,8 +7,8 @@ let currentZoom = 1;
 // Zoom boundaries for each layer
 const ZOOM_LEVELS = {
     layer1: { min: 1, max: 1.5, fadeStart: 1.5, fadeEnd: 2 },
-    layer2: { min: 1.5, max: 5.5, fadeStart: 5.5, fadeEnd: 6 },
-    layer3: { min: 4, max: 10 }
+    layer2: { min: 1.5, max: 3.5, fadeStart: 3.5, fadeEnd: 4 },
+    layer3: { min: 3.5, max: 7 }
 };
 
 // Handle mouse wheel zoom
