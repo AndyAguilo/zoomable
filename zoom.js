@@ -113,3 +113,29 @@ container.addEventListener('mousemove', (e) => {
     container.scrollLeft = scrollLeft - moveX;
     container.scrollTop = scrollTop - moveY;
 });
+
+// Handle image uploads
+const uploadButtons = document.querySelectorAll('.upload-button');
+const uploadInputs = document.querySelectorAll('.upload-input');
+
+uploadButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const layer = button.getAttribute('data-layer');
+        document.getElementById(`upload${layer}`).click();
+    });
+});
+
+uploadInputs.forEach(input => {
+    input.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                const layer = input.getAttribute('data-layer');
+                const layerDiv = document.getElementById(`layer${layer}`);
+                layerDiv.style.backgroundImage = `url('${event.target.result}')`;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+});
